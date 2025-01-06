@@ -29,9 +29,11 @@ gradlew signingReport
 - انقر على "Register App".
 - بعد التسجيل، سيتم توليد ملف `google-services.json`. قم بتنزيله وضعه في مسار: `android/app/`
 - إعداد ملفات Gradle:
-افتح ملف `android/build.gradle` وأضف ما يلي في `dependencies`:
+افتح ملف `android/build.gradle` وأضف ما يلي:
 ```gradle
-classpath 'com.google.gms:google-services:4.3.15'
+dependencies {
+    classpath 'com.google.gms:google-services:4.3.15'
+}
 ```
 
 افتح ملف `android/app/build.gradle` وأضف السطر التالي في نهاية الملف:
