@@ -19,9 +19,9 @@
 ### إضافة تطبيق Android:
 - انقر على أيقونة Android في لوحة Firebase.
 - أدخل التفاصيل التالية:
-   - **Android package name**: هو اسم الحزمة لتطبيقك (يمكنك العثور عليه في ملف `android/app/build.gradle` تحت `applicationId`).
-   - **App nickname**: (اختياري) اسم التطبيق في Firebase.
-   - **SHA-1**: (اختياري الآن، لكنه ضروري لبعض الميزات مثل المصادقة باستخدام Google).
+  - **Android package name**: هو اسم الحزمة لتطبيقك (يمكنك العثور عليه في ملف `android/app/build.gradle` تحت `applicationId`).
+  - **App nickname**: (اختياري) اسم التطبيق في Firebase.
+  - **SHA-1**: (اختياري الآن، لكنه ضروري لبعض الميزات مثل المصادقة باستخدام Google).
   نفتح Command Prompt على مسار المشروع في فولدر `android` وأنفذ الأمر التالي لتظهر معلومات SHA-1 و SHA-256 ضمن التقرير:
  ```
 gradlew signingReport
