@@ -27,10 +27,12 @@
 افتح ملف `android/build.gradle` وأضف ما يلي في `dependencies`:
 ```gradle
 classpath 'com.google.gms:google-services:4.3.15'
+```
 
 افتح ملف `android/app/build.gradle` وأضف السطر التالي في نهاية الملف:
 ```gradle
-apply plugin: 'com.google.gms.google-services'```
+apply plugin: 'com.google.gms.google-services'
+```
 
 - إضافة مكتبات Firebase إلى Flutter في ملف `pubspec.yaml`.
 
@@ -38,7 +40,8 @@ apply plugin: 'com.google.gms.google-services'```
 dependencies:
   firebase_core: ^2.15.1
   firebase_auth: ^4.7.0
-  cloud_firestore: ^5.8.0```
+  cloud_firestore: ^5.8.0
+```
 
 - تهيئة Firebase في كود التطبيق: افتح ملف `main.dart` وأضف التالي في بداية main():
 
@@ -49,4 +52,5 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());
-}```
+}
+```
