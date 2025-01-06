@@ -29,16 +29,9 @@ gradlew signingReport
 - انقر على "Register App".
 - بعد التسجيل، سيتم توليد ملف `google-services.json`. قم بتنزيله وضعه في مسار: `android/app/`
 - إعداد ملفات Gradle:
-افتح ملف `android/build.gradle` وأضف ما يلي:
+افتح ملف `android/app/build.gradle` وأضف السطر التالي في `plugins`:
 ```gradle
-dependencies {
-    classpath 'com.google.gms:google-services:4.3.15'
-}
-```
-
-افتح ملف `android/app/build.gradle` وأضف السطر التالي في نهاية الملف:
-```gradle
-apply plugin: 'com.google.gms.google-services'
+id 'com.google.gms.google-services' version '4.4.2' apply false
 ```
 
 - إضافة مكتبات Firebase إلى Flutter في ملف `pubspec.yaml`.
@@ -57,7 +50,16 @@ import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  Platform.isAndroid
+      ? await Firebase.initializeApp(
+          options: const FirebaseOptions(
+            apiKey: ' // currentKey موجود في ملف جوجل سيرفيس',
+            appId: ' // mobileSDKappId موجود في ملف جوجل سيرفيس',
+            messagingSenderId: ' // project_number موجود في ملف جوجل سيرفيس',
+            projectId: ' // project_id موجود في ملف جوجل سيرفيس',
+          ),
+        )
+      : await Firebase.initializeApp();
   runApp(MyApp());
 }
 ```
