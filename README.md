@@ -63,7 +63,8 @@ void main() async {
   runApp(MyApp());
 }
 ```
-## 3/ إعداد Firebase Authentication في تطبيق Flutter
+## 3/ إعداد Firebase Authentication في تطبيق Flutter:
+
 - توجه إلى `Firebase Console`. واختر مشروعك الذي أنشأته مسبقًا.
 - انقر على `Authentication` من الشريط الجانبي. و `Get Started`.
 - في قسم `Sign-in methods`، قم بتفعيل الطرق التي تحتاجها (مثلاً: `Email/Password` أو `Google Sign-In`):
@@ -101,6 +102,7 @@ ElevatedButton(
   child: Text('Register'),
 ),
 ```
+
 ### تسجيل الدخول باستخدام البريد الإلكتروني وكلمة المرور:
 أضف وظيفة تسجيل الدخول:
 ```dart
@@ -123,6 +125,7 @@ ElevatedButton(
   child: Text('Login'),
 ),
 ```
+
 ### تسجيل الخروج:
 - لإضافة وظيفة تسجيل الخروج:
 ```dart
