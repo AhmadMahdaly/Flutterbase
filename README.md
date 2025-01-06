@@ -26,7 +26,8 @@
 - إعداد ملفات Gradle:
 افتح ملف `android/build.gradle` وأضف ما يلي في `dependencies`:
 ```gradle
-classpath 'com.google.gms:google-services:4.3.15'```
+classpath 'com.google.gms:google-services:4.3.15'
+
 افتح ملف `android/app/build.gradle` وأضف السطر التالي في نهاية الملف:
 ```gradle
 apply plugin: 'com.google.gms.google-services'```
