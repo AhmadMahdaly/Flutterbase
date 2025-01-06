@@ -53,10 +53,10 @@ void main() async {
   Platform.isAndroid
       ? await Firebase.initializeApp(
           options: const FirebaseOptions(
-            apiKey: ' // currentKey موجود في ملف جوجل سيرفيس',
-            appId: ' // mobileSDKappId موجود في ملف جوجل سيرفيس',
-            messagingSenderId: ' // project_number موجود في ملف جوجل سيرفيس',
-            projectId: ' // project_id موجود في ملف جوجل سيرفيس',
+            apiKey: 'current_key', // google_services موجود في ملف  
+            appId: 'mobilesdk_app_id', // google_services موجود في ملف  
+            messagingSenderId: 'project_number', // google_services موجود في ملف  
+            projectId: 'project_id', // google_services موجود في ملف  
           ),
         )
       : await Firebase.initializeApp();
